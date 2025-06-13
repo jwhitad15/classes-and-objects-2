@@ -13,21 +13,21 @@ public class BetterStudentManager {
     public void addStudent(String name, double grade) {
         // This method should add a new student to the list of students
         System.out.println("Enter student name: ");
-        String studentName = scanner.nextLine();
+        String name = scanner.nextLine();
 
         System.out.println("Enter student grade: ");
-        double gpa = scanner.nextLine();
+        double grade = scanner.nextLine();
 
-        Student student = new Student(studentName, gpa);
+        Student student = new Student(name, grade);
         students.add(student);
     }
 
     public void removeStudent(String name) {
         // This method should remove the student with the given name from the list of students
         System.out.print("Which student would you like to delete? ");
-        String studentName = scanner.nextLine();
+        String name = scanner.nextLine();
 
-        Student student = new Student(studentName);
+        Student student = new Student(String name);
         students.remove(student);
     }
 
