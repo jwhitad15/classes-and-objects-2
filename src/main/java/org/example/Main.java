@@ -5,7 +5,7 @@ import java.util.Scanner;
 // This class handles all I/O for testing the BetterStudentManager class
 // You do not need to modify this class
 public class Main {
-    private static final Scanner scanner = new Scanner(System.in);
+    static final Scanner scanner = new Scanner(System.in);
     private static final BetterStudentManager manager = new BetterStudentManager();
 
     public static void main(String[] args) {

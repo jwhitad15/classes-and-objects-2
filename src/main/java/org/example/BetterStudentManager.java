@@ -6,6 +6,7 @@ package org.example;
 
 import java.util.ArrayList;
 import java.util.List;
+import static org.example.Main.scanner;
 
 public class BetterStudentManager {
     public List<Student> students = new ArrayList<>();
@@ -13,10 +14,10 @@ public class BetterStudentManager {
     public void addStudent(String name, double grade) {
         // This method should add a new student to the list of students
         System.out.println("Enter student name: ");
-        String name = scanner.nextLine();
+        String studentName = scanner.nextLine();
 
         System.out.println("Enter student grade: ");
-        double grade = scanner.nextLine();
+        double studentGrade = Double.parseDouble(scanner.nextLine());
 
         Student student = new Student(name, grade);
         students.add(student);
@@ -25,9 +26,10 @@ public class BetterStudentManager {
     public void removeStudent(String name) {
         // This method should remove the student with the given name from the list of students
         System.out.print("Which student would you like to delete? ");
-        String name = scanner.nextLine();
+        String studentName = scanner.nextLine();
 
-        Student student = new Student(String name);
+        double grade = 0;
+        Student student = new Student(studentName, grade);
         students.remove(student);
     }
 
